@@ -1,0 +1,58 @@
+version: '3:9'
+
+services:
+  db:
+    image: postgres
+    container_name: journal_db
+    ports:
+      - 5432:5432
+    restart: always
+    env_file:
+      - .env-prod
+    volumes:
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+      - app_data:/var/lib/postgresql/data
+    networks:
+     - back
+
+  api:
+    build:
+      context: .
+      dockerfile: src/Dockerfile
+    container_name: service
+    restart: always
+    env_file:
+      - .env-prod
+    command:
+      - "/journal_api/docker/app.sh"
+    depends_on:
+      - db
+    networks:
+      - back
+    volumes:
+      - ./:/src
+
+  nginx:
+    depends_on:
+      - api
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile
+    ports:
+      - 80:80
+    networks:
+      - back
+    restart: always
+
+#  adminer:
+#    image: adminer
+#    restart: always
+#    ports:
+#      - 8080:8080
+
+volumes:
+  app_data:
+
+networks:
+  back: {}

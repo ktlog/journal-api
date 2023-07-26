@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "journal-api"
+version = "0.1.0"
+description = ""
+authors = ["ktlog <tkb.msk@gmail.com>"]
+readme = "README.md"
+packages = [{include = "journal_api"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.100.0"
+uvicorn = "^0.22.0"
+python-dotenv = "^1.0.0"
+alembic = "^1.11.1"
+sqlalchemy = "^2.0.18"
+asyncpg = "^0.28.0"
+psycopg2-binary = "^2.9.6"
+pydantic-settings = "^2.0.1"
+python-jose = "^3.3.0"
+passlib = "^1.7.4"
+python-multipart = "^0.0.6"
+bcrypt = "^4.0.1"
+email-validator = "^2.0.0.post2"
+gunicorn = "^21.2.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

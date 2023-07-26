@@ -1,0 +1,6 @@
+.idea
+.git
+Dockerfile
+Makefile
+.env
+.env-*
