@@ -28,8 +28,8 @@ poetry shell
 in project root and set environment variables for application:
 ```
 mv .env.dev .env-prod
-echo POSTGRES_PASSWORD=POSTGRES >> .env-prod
-echo POSTGRES_USER=POSTGRES >> .env-prod
+echo POSTGRES_PASSWORD=postgres >> .env-prod
+echo POSTGRES_USER=postgres >> .env-prod
 echo POSTGRES_DB=journaling >> .env-prod
 echo POSTGRES_HOST=db >> .env-prod
 echo POSTGRES_PORT=5432 >> .env-prod
