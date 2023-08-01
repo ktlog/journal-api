@@ -41,14 +41,14 @@ echo SERVER_PORT=8000 >> .env-prod
 
 echo JWT_SECRET=$(openssl rand -hex 16) >> .env-prod
 ```
-3. Finally run:
+3. Finally, run:
 ```
 docker compose build
 docker compose up
 ```
 
 If an error occurs while creating the api container, try changing
-src/Dockerfile in the line "COPY" to:
+src/Dockerfile in the line `COPY` to:
 ```
 COPY . .
 ```
