@@ -22,7 +22,7 @@ app.add_middleware(
 
 @app.get("/", tags=['Root'])
 async def root():
-    return {"message": "Fastapi works"}
+    return {"message": "The API documentation is available at /docs"}
 
 
 app.include_router(router)
