@@ -5,7 +5,9 @@
 I love to write thoughts in a notebook. This has many positive implications. 
 But the most important thing is awareness, I live here and now, today will never happen again. 
 This is important to remember.
+
 ---
+
 The application is under development and now there is a minimal backend part.
 What the api looks like, you can see [here](http://www.sswaf.ru/docs).
 
