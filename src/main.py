@@ -4,7 +4,13 @@ from fastapi.middleware.cors import CORSMiddleware
 from api import router
 
 
-app = FastAPI()
+app = FastAPI(
+    title='Journaling API',
+    version='1.0',
+    description='API for journaling life events',
+    docs_url='/docs',
+    redoc_url='/redoc',
+)
 
 origins = [
     'http://localhost:3000',
