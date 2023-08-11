@@ -1,11 +1,11 @@
 # Journaling web application
 
-[Inspiration](https://dayoneapp.com)
+[Inspiration](https://dayoneapp.com) - DayOne App, which I'm still using and happy about that.
 
 I love to write thoughts in a notebook. This has many positive implications. 
 But the most important thing is awareness, I live here and now, today will never happen again. 
 This is important to remember.
-
+---
 The application is under development and now there is a minimal backend part.
 What the api looks like, you can see [here](http://www.sswaf.ru/docs).
 
@@ -45,10 +45,4 @@ echo JWT_SECRET=$(openssl rand -hex 16) >> .env-prod
 ```
 docker compose build
 docker compose up
-```
-
-If an error occurs while creating the api container, try changing
-src/Dockerfile in the line `COPY` to:
-```
-COPY . .
 ```
