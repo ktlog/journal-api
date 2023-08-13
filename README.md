@@ -5,7 +5,9 @@
 I love to write thoughts in a notebook. This has many positive implications. 
 But the most important thing is awareness, I live here and now, today will never happen again. 
 This is important to remember.
+
 ---
+
 The application is under development and now there is a minimal backend part.
 The API documentaion is available [here](https://dayjournal.ru/docs).
 
