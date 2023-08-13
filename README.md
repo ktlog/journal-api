@@ -9,11 +9,11 @@ This is important to remember.
 ---
 
 The application is under development and now there is a minimal backend part.
-What the api looks like, you can see [here](http://www.sswaf.ru/docs).
+The API documentaion is available [here](https://dayjournal.ru/docs).
 
 ### Stack:
 - Fastapi
-- Postgres (SQLAlchemy)
+- Postgres + asyncpg (SQLAlchemy)
 - React
 - Typescript
 - Docker, docker-compose
@@ -26,22 +26,22 @@ cd journal-api
 poetry install
 poetry shell
 ```
-2. Rename .env.dev to .env-prod file  
+2. Rename .env.dev to .env file  
 in project root and set environment variables for application:
 ```
-mv .env.dev .env-prod
-echo POSTGRES_PASSWORD=postgres >> .env-prod
-echo POSTGRES_USER=postgres >> .env-prod
-echo POSTGRES_DB=journaling >> .env-prod
-echo POSTGRES_HOST=db >> .env-prod
-echo POSTGRES_PORT=5432 >> .env-prod
+mv .env.dev .env
+echo POSTGRES_PASSWORD=postgres >> .env
+echo POSTGRES_USER=postgres >> .env
+echo POSTGRES_DB=journaling >> .env
+echo POSTGRES_HOST=db >> .env
+echo POSTGRES_PORT=5432 >> .env
 
-echo DATABASE_URL=postgresql+asyncpg://postgres:postgres@db:5432/journaling  >> .env-prod
+echo DATABASE_URL=postgresql+asyncpg://postgres:postgres@db:5432/journaling  >> .env
 
-echo SERVER_HOST=127.0.0.1 >> .env-prod
-echo SERVER_PORT=8000 >> .env-prod
+echo SERVER_HOST=127.0.0.1 >> .env
+echo SERVER_PORT=8000 >> .env
 
-echo JWT_SECRET=$(openssl rand -hex 16) >> .env-prod
+echo JWT_SECRET=$(openssl rand -hex 16) >> .env
 ```
 3. Finally, run:
 ```

@@ -16,6 +16,6 @@ COPY --from=requirements-stage /tmp/requirements.txt requirements.txt
 
 RUN pip install --no-cache-dir --upgrade -r requirements.txt
 
-COPY .. .
+COPY . .
 
 RUN chmod u+x docker/app.sh
