@@ -26,7 +26,7 @@ app.add_middleware(
 )
 
 
-@app.get("/", tags=['Root'])
+@app.get("/", include_in_schema=False)
 async def root():
     return {"message": "The API documentation is available at /docs"}
 
