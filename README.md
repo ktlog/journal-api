@@ -19,12 +19,10 @@ The API documentaion is available [here](https://dayjournal.ru/docs).
 - Docker, docker-compose
 
 ### Quickstart with Docker
-1. Run the following commands to bootstrap your environment with poetry:
+1. Run the following commands:
 ```
 git clone https://github.com/ktlog/journal-api.git
 cd journal-api
-poetry install
-poetry shell
 ```
 2. Rename .env.dev to .env file  
 in project root and set environment variables for application:
